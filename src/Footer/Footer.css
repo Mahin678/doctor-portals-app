@@ -1,0 +1,49 @@
+.footer-container {
+	background-image: url('../images/Group\ 26@2x.png');
+	background-size: cover;
+	padding: 40px 0px;
+}
+.footer-address ul {
+	display: inline;
+	padding: 0;
+}
+.footer-address ul li {
+	display: inline;
+	list-style-type: none;
+	margin: 0px 10px;
+}
+.footer-address ul li a {
+	display: inline-block;
+	border-radius: 50%;
+	border: 1px solid rgb(106, 206, 206);
+	height: 40px;
+	width: 40px;
+	line-height: 39px;
+	text-align: center;
+	color: rgb(106, 206, 206);
+	margin-right: 5px;
+	transition: all 0.2s ease 0s;
+}
+.footer-address ul li a:hover {
+	background: rgb(106, 206, 206);
+	color: rgb(255, 255, 255);
+}
+.footer-service h4 {
+	font-size: 20px !important;
+	font-weight: 700;
+	color: rgb(96, 199, 199);
+}
+.footer-service p {
+	margin: 7px 0px;
+}
+
+.footer-service p a {
+	text-decoration: none;
+	padding: 4px 0px;
+	display: inline-block;
+	font-weight: 500;
+	color: rgba(155, 160, 176, 0.85);
+}
+.copy-right {
+	color: rgba(155, 160, 176, 0.85);
+}

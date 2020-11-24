@@ -1,38 +1,41 @@
-.App {
-  text-align: center;
+body {
+	text-transform: capitalize;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.custom-btn {
+	width: 240px;
+	height: 50px;
+	background: linear-gradient(to left, #19d3ae 0%, #0fcfec 100%);
+	color: #fff;
+	border: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sub-title {
+	color: #1cc7c1;
+	font-size: 22px;
+	text-transform: uppercase;
+	margin: 20px 0px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@media only screen and (max-width: 768px) {
+	.ourPatients-header-text {
+		width: 100% !important;
+	}
+	.header-main-title {
+		font-size: 28px;
+	}
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media only screen and (max-width: 992px) {
+	.header-container {
+		height: 100% !important;
+	}
+	.service-wrapper img {
+		width: 100% !important;
+	}
+	.AppointmentBlock {
+		display: none;
+	}
+	.header-blog {
+		height: 100% !important;
+	}
+	.navbar-text {
+		color: #000000 !important;
+	}
 }

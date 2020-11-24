@@ -1,0 +1,89 @@
+.blog-wrapper {
+	height: 300px;
+	position: relative;
+	z-index: 3;
+	padding: 50px 30px;
+	color: rgb(60, 60, 62);
+	border-radius: 5px;
+	margin-top: 30px;
+}
+.blog-wrapper:hover {
+	position: relative;
+	color: #ffff !important;
+}
+.blog-wrapper:hover::before {
+	opacity: 0.3;
+	position: absolute;
+	right: 7%;
+	top: 4%;
+	content: '';
+	height: 200px;
+	width: 220px;
+	background-image: url('../../images/Mask\ Group\ 7.png');
+	background-size: cover;
+	background-position: center center;
+	z-index: 999;
+	transition: all 0.3s ease 0s;
+}
+.blog-wrapper:hover::after {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	height: 100%;
+	width: 100%;
+	background: linear-gradient(
+		100deg,
+		rgb(25, 211, 174) 0%,
+		rgb(14, 207, 236) 100%
+	);
+	content: '';
+	z-index: -1;
+	transition: all 0.3s ease 0s;
+	border-radius: 5px;
+}
+
+.blog-wrapper:hover h4 {
+	color: #ffff !important;
+}
+.blog-wrapper:hover h4 span {
+	color: #ffff !important;
+}
+.blog-wrapper h3 {
+	font-weight: normal;
+	font-size: 24px;
+}
+.blog-header-wrapper {
+	position: relative;
+	z-index: 999;
+	margin: 5px;
+	text-align: left;
+}
+.blog-header-wrapper img {
+	width: 50px;
+}
+.blog-header-wrapper h4 {
+	font-weight: bold;
+	font-size: 21px;
+	color: #3c3c3e !important;
+}
+.blog-header-wrapper h4 span {
+	font-weight: bold;
+	font-size: 12px;
+	margin: 4px;
+	color: #b3b2b5;
+}
+.right-arrow {
+	font-size: 50px;
+	display: none;
+}
+.blog-details {
+	font-size: 17px;
+	/* line-height: 29px; */
+}
+.blog-wrapper:hover .right-arrow {
+	display: block;
+	color: #ffff;
+}
+.blog-wrapper:hover .blog-details {
+	display: none;
+}

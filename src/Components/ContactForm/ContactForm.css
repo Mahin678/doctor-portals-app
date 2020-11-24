@@ -1,0 +1,17 @@
+.contact-form {
+	position: relative;
+	background: linear-gradient(rgba(58, 66, 86, 0.9), rgba(58, 66, 86, 0.9)),
+		url('../../images/Mask\ Group\ 4.png');
+	background-position: 50% 50%;
+	color: #ffff;
+	height: 110vh;
+}
+.contact-form input {
+	padding: 2rem;
+	margin: 10px 0px;
+}
+textarea {
+	height: 7rem !important;
+	font-size: 20px !important;
+	text-transform: capitalize;
+}
