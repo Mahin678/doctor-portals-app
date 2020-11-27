@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-const Navbar = () => {
+const Navbar = (props) => {
 	return (
 		<nav className="navbar navbar-expand-lg navbar-light bg-transparent">
 			<button
@@ -37,7 +37,7 @@ const Navbar = () => {
 								color: 'red',
 							}}
 							className="nav-link nav-text-black mr-3"
-							to="/home"
+							to="/appointment"
 						>
 							About
 						</Link>
@@ -60,8 +60,8 @@ const Navbar = () => {
 								fontWeight: 'bold',
 								color: 'red',
 							}}
-							className="nav-link navbar-text mr-3 text-light"
-							to="/home"
+							className={`nav-link navbar-text mr-3 text-light ${props.text} `}
+							to="/appointmentByDate"
 						>
 							Dashboard
 						</Link>
@@ -72,7 +72,7 @@ const Navbar = () => {
 								fontWeight: 'bold',
 								color: 'red',
 							}}
-							className="nav-link navbar-text mr-3 text-light"
+							className={`nav-link navbar-text mr-3 text-light ${props.text} `}
 							to="/home"
 						>
 							Blog
@@ -84,7 +84,7 @@ const Navbar = () => {
 								fontWeight: 'bold',
 								color: 'red',
 							}}
-							className="nav-link navbar-text mr-3 text-light"
+							className={`nav-link navbar-text mr-3 text-light ${props.text} `}
 							to="/home"
 						>
 							Contact Us

@@ -26,8 +26,11 @@ const AppointmentForm = ({ modalIsOpen, closeModal, appointmentOn, date }) => {
 		const appointment = { ...data };
 		appointment.date = date;
 		appointment.created = new Date();
-		appointment.department = appointmentOn.subject;
-		fetch('http://localhost:9000/addBooking', {
+		appointment.department = appointmentOn.department;
+		appointment.doctorEmail = appointmentOn.email;
+		appointment.Schedule = appointmentOn.Schedule;
+		console.log(appointment);
+		fetch('http://localhost:8000/addBooking', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify(appointment),
@@ -53,7 +56,7 @@ const AppointmentForm = ({ modalIsOpen, closeModal, appointmentOn, date }) => {
 					{appointmentOn.subject}
 				</h2>
 				<p className="text-secondary text-center">
-					<small>ON {date.toDateString()}</small>
+					<small>ON {`${date}`}</small>
 				</p>
 				<form className="p-5" onSubmit={handleSubmit(onSubmit)}>
 					<div className="form-group">

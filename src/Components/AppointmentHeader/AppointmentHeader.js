@@ -4,30 +4,28 @@ import Navbar from '../Navbar/Navbar';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import DoctorBookingTime from '../DoctorBookingTime/DoctorBookingTime';
+import Footer from '../../Footer/Footer';
+import HeaderContent from '../HeaderContent/HeaderContent';
+import Header from '../Header/Header';
 const AppointmentHeader = () => {
 	const [selectedDate, setSelectedDate] = useState(new Date());
 	const handleDateChange = (date) => {
-		setSelectedDate(date);
+		const data = date.toDateString();
+		setSelectedDate(data);
 	};
 	return (
-		<div className="container">
-			<Navbar text={'text-black'} />
-			<main>
-				<div
-					style={{ height: '630px' }}
-					className="row  d-flex align-items-center"
-				>
-					<div className="col-lg-4 offset-md-1">
-						<h1>Appointment </h1>
-						<Calendar onChange={handleDateChange} value={new Date()} />
-					</div>
-					<div className="col-lg-6">
-						<img className="img-fluid" src={contentImg} alt="" />
-					</div>
+		<>
+			<Header>
+				<div className="container">
+					<h1 className="mb-3">Appointment </h1>
+					<Calendar onChange={handleDateChange} value={new Date()} />
 				</div>
+			</Header>
+			<div className="container my-5">
 				<DoctorBookingTime selectedDate={selectedDate} />
-			</main>
-		</div>
+			</div>
+			<Footer />
+		</>
 	);
 };
 

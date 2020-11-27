@@ -3,6 +3,7 @@
 	background-size: cover;
 	padding: 40px 0px;
 }
+
 .footer-address ul {
 	display: inline;
 	padding: 0;
@@ -27,6 +28,10 @@
 .footer-address ul li a:hover {
 	background: rgb(106, 206, 206);
 	color: rgb(255, 255, 255);
+}
+.footer-address ul li a svg {
+	height: 40px;
+	width: 40px;
 }
 .footer-service h4 {
 	font-size: 20px !important;

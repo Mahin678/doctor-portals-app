@@ -14,12 +14,25 @@ body {
 	text-transform: uppercase;
 	margin: 20px 0px;
 }
+
+.react-calendar {
+	border: none !important;
+}
+
 @media only screen and (max-width: 768px) {
 	.ourPatients-header-text {
 		width: 100% !important;
 	}
 	.header-main-title {
 		font-size: 28px;
+	}
+	.bg-white {
+		text-align: center;
+	}
+	.sidebar {
+		height: 100% !important;
+		position: static !important;
+		width: 100% !important;
 	}
 }
 @media only screen and (max-width: 992px) {
@@ -37,5 +50,9 @@ body {
 	}
 	.navbar-text {
 		color: #000000 !important;
+	}
+
+	.table {
+		overflow: scroll;
 	}
 }

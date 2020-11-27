@@ -9,6 +9,7 @@ import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Login from './Components/Login/Login';
 import Dashboard from './Components/Dashboard/DashboardPanel/Dashboard';
 import AddDoctorInfo from './Components/Dashboard/AddDoctorInfo/AddDoctorInfo';
+import AppointmentDashBoard from './Components/Dashboard/AppointmentDashBoard/AppointmentDashBoard';
 export const UserContext = createContext();
 function App() {
 	const [selectedDate, setSelectedDate] = useState({});
@@ -16,11 +17,17 @@ function App() {
 		<UserContext.Provider value={[selectedDate, setSelectedDate]}>
 			<Router>
 				<Switch>
-					<PrivateRoute path="/home">
+					<Route exact path="/home">
+						<Home />
+					</Route>
+					<PrivateRoute path="/appointment">
 						<AppointmentHeader />
 					</PrivateRoute>
-					<PrivateRoute path="/dashboard">
+					<PrivateRoute path="/appointmentByDate">
 						<Dashboard />
+					</PrivateRoute>
+					<PrivateRoute path="/dashboard">
+						<AppointmentDashBoard />
 					</PrivateRoute>
 					<Route path="/login">
 						<Login />

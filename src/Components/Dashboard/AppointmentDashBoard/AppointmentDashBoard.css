@@ -1,0 +1,24 @@
+.dashboard-custom-card {
+	width: 250px;
+	height: 120px;
+	background-color: red;
+	color: white;
+	border-radius: 7px;
+	margin: 0 auto;
+}
+.today-appointment {
+	background-color: #fff;
+	padding: 30px;
+}
+.dashboard-card1 {
+	background-color: #f1536e;
+}
+.dashboard-card2 {
+	background-color: #3da5f4;
+}
+.dashboard-card3 {
+	background-color: #00c689;
+}
+.dashboard-card4 {
+	background-color: #fda006;
+}
