@@ -48,7 +48,7 @@ const bookingData = [
 const DoctorBookingTime = ({ selectedDate }) => {
 	const [doctorInfo, setDoctorInfo] = useState([]);
 	useEffect(() => {
-		fetch('http://localhost:8000/doctors')
+		fetch('https://murmuring-shore-14683.herokuapp.com/doctors')
 			.then((res) => res.json())
 			.then((res) => setDoctorInfo(res));
 	});

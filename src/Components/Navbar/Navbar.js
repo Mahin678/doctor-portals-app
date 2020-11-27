@@ -1,7 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
 import './Navbar.css';
 const Navbar = (props) => {
+	const history = useHistory();
+	const handleNavbar = () => {
+		history.replace('/');
+	};
 	return (
 		<nav className="navbar navbar-expand-lg navbar-light bg-transparent">
 			<button
@@ -18,7 +22,7 @@ const Navbar = (props) => {
 			<div className="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul className="navbar-nav ml-auto">
 					<li className="nav-item">
-						<Link
+						<NavLink
 							activeStyle={{
 								fontWeight: 'bold',
 								color: 'red',
@@ -28,10 +32,10 @@ const Navbar = (props) => {
 							to="/home"
 						>
 							Home
-						</Link>
+						</NavLink>
 					</li>
 					<li className="nav-item">
-						<Link
+						<NavLink
 							activeStyle={{
 								fontWeight: 'bold',
 								color: 'red',
@@ -39,23 +43,12 @@ const Navbar = (props) => {
 							className="nav-link nav-text-black mr-3"
 							to="/appointment"
 						>
-							About
-						</Link>
+							Appointment
+						</NavLink>
 					</li>
+
 					<li className="nav-item">
-						<Link
-							activeStyle={{
-								fontWeight: 'bold',
-								color: 'red',
-							}}
-							className="nav-link nav-text-black mr-3"
-							to="/home"
-						>
-							Dental Service
-						</Link>
-					</li>
-					<li className="nav-item">
-						<Link
+						<NavLink
 							activeStyle={{
 								fontWeight: 'bold',
 								color: 'red',
@@ -64,31 +57,33 @@ const Navbar = (props) => {
 							to="/appointmentByDate"
 						>
 							Dashboard
-						</Link>
+						</NavLink>
 					</li>
 					<li className="nav-item">
-						<Link
+						<a
+							onClick={handleNavbar}
 							activeStyle={{
 								fontWeight: 'bold',
 								color: 'red',
 							}}
 							className={`nav-link navbar-text mr-3 text-light ${props.text} `}
-							to="/home"
+							href="#blog"
 						>
 							Blog
-						</Link>
+						</a>
 					</li>
 					<li className="nav-item">
-						<Link
+						<a
+							onClick={handleNavbar}
 							activeStyle={{
 								fontWeight: 'bold',
 								color: 'red',
 							}}
 							className={`nav-link navbar-text mr-3 text-light ${props.text} `}
-							to="/home"
+							href="#contact"
 						>
 							Contact Us
-						</Link>
+						</a>
 					</li>
 				</ul>
 			</div>

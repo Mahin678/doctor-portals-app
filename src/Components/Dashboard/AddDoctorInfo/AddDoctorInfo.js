@@ -29,7 +29,7 @@ const AddDoctorInfo = () => {
 		formData.append('department', info.Department);
 		formData.append('Schedule', info.time);
 
-		fetch('http://localhost:8000/addDoctors', {
+		fetch('https://murmuring-shore-14683.herokuapp.com/addDoctors', {
 			method: 'POST',
 			body: formData,
 		})

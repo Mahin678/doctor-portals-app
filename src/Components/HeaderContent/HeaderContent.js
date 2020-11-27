@@ -4,7 +4,7 @@ import contentImg from '../../images/Mask Group 1.png';
 const HeaderContent = (props) => {
 	const history = useHistory();
 	const handleAppointment = () => {
-		history.push('/home');
+		history.push('/appointment');
 	};
 	return (
 		<main>

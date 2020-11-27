@@ -18,11 +18,11 @@ const AppointmentDashBoard = () => {
 		let date = new Date(`${event.target.value}`).toDateString();
 		setDate(date);
 	};
-	fetch('http://localhost:8000/allPatients')
+	fetch('https://murmuring-shore-14683.herokuapp.com/allPatients')
 		.then((res) => res.json())
 		.then((res) => setAllPatients(res));
 	useEffect(() => {
-		fetch('http://localhost:8000/toDayAppointment', {
+		fetch('https://murmuring-shore-14683.herokuapp.com/toDayAppointment', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({

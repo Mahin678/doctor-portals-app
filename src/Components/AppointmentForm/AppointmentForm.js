@@ -30,7 +30,7 @@ const AppointmentForm = ({ modalIsOpen, closeModal, appointmentOn, date }) => {
 		appointment.doctorEmail = appointmentOn.email;
 		appointment.Schedule = appointmentOn.Schedule;
 		console.log(appointment);
-		fetch('http://localhost:8000/addBooking', {
+		fetch('https://murmuring-shore-14683.herokuapp.com/addBooking', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify(appointment),

@@ -5,8 +5,10 @@ import { useHistory, useLocation } from 'react-router-dom';
 import LoginBg from '../../images/Group 140.png';
 import { UserContext } from '../../App';
 import { firebaseConfig } from './firebaseConfig';
-
+import { useForm } from 'react-hook-form';
 const Login = () => {
+	const { register, handleSubmit, watch, errors } = useForm();
+
 	const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 	const history = useHistory();
 	const location = useLocation();
@@ -45,28 +47,50 @@ const Login = () => {
 				// Handle error
 			});
 	};
+	const onSubmit = (data) => {
+		firebase
+			.auth()
+			.createUserWithEmailAndPassword(data.email, data.password)
+			.then((user) => {
+				console.log(user);
+				// Signed in
+				// ...
+			})
+			.catch((error) => {
+				var errorCode = error.code;
+				var errorMessage = error.message;
+				// ..
+				console.log(errorMessage);
+			});
+	};
 
 	return (
 		<div className="login-page container">
 			<div className="row align-items-center" style={{ height: '100vh' }}>
 				<div className="col-md-6 shadow p-5">
-					<div className="form-group">
-						<label htmlFor="">User Name</label>
-						<input type="text" className="form-control" />
-					</div>
-					<div className="form-group">
-						<label htmlFor="">Password</label>
-						<input type="password" className="form-control" />
-					</div>
-					<div className="form-group">
-						<label htmlFor="" className="text-danger">
-							Forgot your password?
-						</label>
-						<br />
-						<label htmlFor="" className="text-danger">
-							<small>You can only login with your gmail</small>
-						</label>
-					</div>
+					<form onSubmit={handleSubmit(onSubmit)}>
+						<div className="form-group">
+							<label htmlFor="Name">Email</label>
+							<input
+								className="form-control"
+								name="email"
+								type="email"
+								ref={register({ required: true })}
+							/>
+							{errors.email && 'email is required'}
+						</div>
+						<div className="form-group">
+							<label htmlFor="Name">Password</label>
+							<input
+								type="password"
+								className="form-control"
+								name="password"
+								ref={register({ required: true })}
+							/>
+							{errors.password && 'password is required'}
+						</div>
+						<input className="form-control  btn-danger" type="submit" />
+					</form>
 					<div className="from-group mt-5">
 						<button
 							className="btn btn-success"

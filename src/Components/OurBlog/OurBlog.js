@@ -7,7 +7,7 @@ import bgIcon from '../../images/Mask Group 7.png';
 const OurBlog = () => {
 	return (
 		<section className="OurBlog py-5 my-5">
-			<div className="container">
+			<div className="container" id="blog">
 				<div className="Our-Blog-wrapper text-center ">
 					<h4 className="my-3 sub-title">OUR BLOG</h4>
 					<h2>From Our Blog News</h2>

@@ -1,6 +1,9 @@
 body {
 	text-transform: capitalize;
 }
+html {
+	scroll-behavior: smooth;
+}
 .custom-btn {
 	width: 240px;
 	height: 50px;

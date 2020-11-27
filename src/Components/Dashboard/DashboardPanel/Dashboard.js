@@ -19,7 +19,7 @@ const Dashboard = (props) => {
 		setSelectedDate(data);
 	};
 	useEffect(() => {
-		fetch('http://localhost:8000/appointmentByDate', {
+		fetch('https://murmuring-shore-14683.herokuapp.com/appointmentByDate', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify({
