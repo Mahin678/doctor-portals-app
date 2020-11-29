@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import iconOurPatients from '../../../images/Mask Group 7.png';
 import patients1 from '../../../images/Ellipse 1.png';
 import patients2 from '../../../images/Ellipse 2.png';
@@ -6,6 +6,14 @@ import patients3 from '../../../images/Ellipse 3.png';
 
 import './OurAllPatients.css';
 const OurAllPatients = () => {
+	const [allData, setAllData] = useState([]);
+	useEffect(() => {
+		fetch(
+			'http://flightapi-fra01-ibetest.hitchhiker.net:7725/FlightAPI?singleWsdl'
+		)
+			.then((res) => res.json())
+			.then((res) => console.log(res));
+	}, []);
 	return (
 		<section className="ourPatients  ">
 			<div className="container  ">
