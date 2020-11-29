@@ -40,7 +40,7 @@
 	content: '';
 	height: 200px;
 	width: 220px;
-	background-image: url('../../images/Mask\ Group\ 7.png');
+	background-image: url('../../images/left-quote.svg');
 	background-size: cover;
 	background-position: center center;
 	z-index: 1;
@@ -48,7 +48,7 @@
 	transition: all 0.3s ease 0s;
 }
 .blog-wrapper:hover::before {
-	opacity: 0.1;
+	opacity: 0.3;
 	transition: all 0.3s ease 0s;
 }
 .blog-wrapper:hover h4 {
